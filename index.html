@@ -10,6 +10,12 @@
     <!-- CSS bootstrap v5.2-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
         <!-- Links CSS-->
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
@@ -22,14 +28,24 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Repositorio</a>
+                <a id="repositorio" class="navbar-brand" href="#">Repositorio</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a id="inicio" class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a id="juego" class="nav-link" href="juego.html">Juego</a>           
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a id="contacto" class="nav-link" href="">Contacto</a>
                         </li>
                     </ul>
                 </div>
@@ -38,12 +54,33 @@
     </header>
     <main>
         <div class="container-fluid">
+            <div class="d-flex justify-content-between mb-2">
+                <div class="form-check form-switch">
+                    <label id="theme" class="form-check-label" for="flexSwitchCheckDefault">Modo claro</label>
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                </div>
+                  <div class="dropdown">
+                    <button id="idioma" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" 
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Idioma
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li>
+                            <button class="dropdown-item" type="button" onclick="obtenerTraduccion('es')">Español</button>
+                        </li>
+                        <li>
+                            <button class="dropdown-item" type="button" onclick="obtenerTraduccion('en')">Ingles</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-12">
                 <div class="accordion" id="accordionPanelsStayOpenExample">
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <button class="accordion-button" 
+                        id="botones" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             Botones
                         </button>
                       </h2>
@@ -158,6 +195,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
+        <script src="traduccion.js"></script>
+        <script src="theme.js"></script>
 </body>
 
 </html>
