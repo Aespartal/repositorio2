@@ -16,7 +16,7 @@
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <!-- Links CSS-->
+    <!-- Links CSS-->
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/buttons.css">
@@ -25,178 +25,205 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-                <a id="repositorio" class="navbar-brand" href="#">Repositorio</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a id="inicio" class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a id="juego" class="nav-link" href="juego.html">Juego</a>           
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a id="contacto" class="nav-link" href="">Contacto</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <div class="container-fluid">
-            <div class="d-flex justify-content-between mb-2">
-                <div class="form-check form-switch">
-                    <label id="theme" class="form-check-label" for="flexSwitchCheckDefault">Modo claro</label>
-                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                </div>
-                  <div class="dropdown">
-                    <button id="idioma" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" 
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Idioma
+    <div id="loading" class="text-center">
+        <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+    </div>
+    <div id="webContainer">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a id="repositorio" class="navbar-brand" href="#">Repositorio</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
                     </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li>
-                            <button class="dropdown-item" type="button" onclick="obtenerTraduccion('es')">Español</button>
-                        </li>
-                        <li>
-                            <button class="dropdown-item" type="button" onclick="obtenerTraduccion('en')">Ingles</button>
-                        </li>
-                    </ul>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a id="inicio" class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a id="juego" class="nav-link" href="juego.html">Juego</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a id="contacto" class="nav-link" href="">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="container-fluid">
+                <div class="d-flex justify-content-between mb-2">
+                    <div class="form-check form-switch">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Modo claro</label>
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                    </div>
+                    <div class="dropdown">
+                        <button id="idioma" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Idioma
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li>
+                                <button class="dropdown-item" type="button"
+                                    onclick="obtenerTraduccion('es')">Español</button>
+                            </li>
+                            <li>
+                                <button class="dropdown-item" type="button"
+                                    onclick="obtenerTraduccion('en')">Ingles</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="accordion" id="accordionPanelsStayOpenExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" id="botones" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Botones
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                    data-bs-parent="#accordionPanelsStayOpenExample">
+                                    <div class="accordion-body">
+                                        <div class="row">
+                                            <div class="col"><button type="button" class="gradient-button">
+                                                    <span>Get Started</span>
+                                                </button></div>
+                                            <div class="col"><button type="button" class="clip-button">Get Started</button>
+                                            </div>
+                                            <div class="col"><button type="button" class="shimmer-button">Get
+                                                    Started</button></div>
+                                            <div class="col"><button type="button" class="gradient-border-button">Get
+                                                    Started</button></div>
+                                            <div class="col"><button type="button" class="effect-arrow-button">Get
+                                                    Started</button></div>
+                                            <div class="col"><button type="button" class="hover-effect-button">
+                                                    <span>Get Started</span>
+                                                </button></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Listas
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionPanelsStayOpenExample">
+                                    <div class="accordion-body">
+                                        <div class="row">
+                                            <div class="col">
+                                                <ol class="todo-list">
+                                                    <li>Water the plants</li>
+                                                    <li>Buy groceries</li>
+                                                    <li>Learn Javascript</li>
+                                                    <li>Learn HTML</li>
+                                                    <li>Learn CSS</li>
+                                                </ol>
+                                            </div>
+                                            <div class="col">
+                                                <ul class="hand-list">
+                                                    <li>Water the plants</li>
+                                                    <li>Buy groceries</li>
+                                                    <li>Learn Javascript</li>
+                                                    <li>Learn HTML</li>
+                                                    <li>Learn CSS</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col">
+                                                <dl class="contact-list">
+                                                    <dt><span class="alphabet">A</span></dt>
+                                                    <dd>
+                                                        <img src="images/avatar.png" alt="avatar" class="avatar">
+                                                        <span class="full-name">Alejandro Espartal</span>
+                                                    </dd>
+                                                    <dd>
+                                                        <img src="images/avatar.png" alt="avatar" class="avatar">
+                                                        <span class="full-name">Alejandro Espartal</span>
+                                                    </dd>
+                                                    <dd>
+                                                        <img src="images/avatar.png" alt="avatar" class="avatar">
+                                                        <span class="full-name">Alejandro Espartal</span>
+                                                    </dd>
+                                                    <dt><span class="alphabet">B</span></dt>
+                                                    <dd>
+                                                        <img src="images/avatar.png" alt="avatar" class="avatar">
+                                                        <span class="full-name">Borja iglesias</span>
+                                                    </dd>
+                                                    <dd>
+                                                        <img src="images/avatar.png" alt="avatar" class="avatar">
+                                                        <span class="full-name">Borja iglesias</span>
+                                                    </dd>
+                                                    <dt><span class="alphabet">C</span></dt>
+                                                    <dd>
+                                                        <img src="images/avatar.png" alt="avatar" class="avatar">
+                                                        <span class="full-name">Carlos jose</span>
+                                                    </dd>
+                                                    <dd>
+                                                        <img src="images/avatar.png" alt="avatar" class="avatar">
+                                                        <span class="full-name">Carlos jose</span>
+                                                    </dd>
+                                                    <dd>
+                                                        <img src="images/avatar.png" alt="avatar" class="avatar">
+                                                        <span class="full-name">Carlos jose</span>
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Accordion Item #3
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                    data-bs-parent="#accordionPanelsStayOpenExample">
+                                    <div class="accordion-body">
+                                        <strong>This is the third item's accordion body.</strong> It is hidden by default,
+                                        until the collapse plugin adds the appropriate classes that we use to style each
+                                        element. These classes control the overall appearance, as well as the showing and
+                                        hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                        our default variables. It's also worth noting that just about any HTML can go within
+                                        the <code>.accordion-body</code>, though the transition does limit overflow.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12">
-                <div class="accordion" id="accordionPanelsStayOpenExample">
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" 
-                        id="botones" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Botones
-                        </button>
-                      </h2>
-                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionPanelsStayOpenExample">
-                        <div class="accordion-body">
-                            <div class="row">
-                                <div class="col"><button type="button" class="gradient-button">
-                                    <span>Get Started</span>
-                                </button></div>
-                                <div class="col"><button type="button" class="clip-button">Get Started</button></div>
-                                <div class="col"><button type="button" class="shimmer-button">Get Started</button></div>
-                                <div class="col"><button type="button" class="gradient-border-button">Get Started</button></div>
-                                <div class="col"><button type="button" class="effect-arrow-button">Get Started</button></div>
-                                <div class="col"><button type="button" class="hover-effect-button">
-                                    <span>Get Started</span>
-                                </button></div>
-                            </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Listas
-                        </button>
-                      </h2>
-                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionPanelsStayOpenExample">
-                        <div class="accordion-body">
-                            <div class="row">
-                                <div class="col">
-                                    <ol class="todo-list">
-                                        <li>Water the plants</li>
-                                        <li>Buy groceries</li>
-                                        <li>Learn Javascript</li>
-                                        <li>Learn HTML</li>
-                                        <li>Learn CSS</li>
-                                    </ol>
-                                </div>
-                                <div class="col">
-                                    <ul class="hand-list">
-                                        <li>Water the plants</li>
-                                        <li>Buy groceries</li>
-                                        <li>Learn Javascript</li>
-                                        <li>Learn HTML</li>
-                                        <li>Learn CSS</li>
-                                    </ul>
-                                </div>
-                                <div class="col">
-                                    <dl class="contact-list">
-                                        <dt><span class="alphabet">A</span></dt>
-                                        <dd>
-                                            <img src="images/avatar.png" alt="avatar" class="avatar">
-                                            <span class="full-name">Alejandro Espartal</span>
-                                        </dd>
-                                        <dd>
-                                            <img src="images/avatar.png" alt="avatar" class="avatar">
-                                            <span class="full-name">Alejandro Espartal</span>
-                                        </dd>
-                                        <dd>
-                                            <img src="images/avatar.png" alt="avatar" class="avatar">
-                                            <span class="full-name">Alejandro Espartal</span>
-                                        </dd>
-                                        <dt><span class="alphabet">B</span></dt>
-                                        <dd>
-                                            <img src="images/avatar.png" alt="avatar" class="avatar">
-                                            <span class="full-name">Borja iglesias</span>
-                                        </dd>
-                                        <dd>
-                                            <img src="images/avatar.png" alt="avatar" class="avatar">
-                                            <span class="full-name">Borja iglesias</span>
-                                        </dd>
-                                        <dt><span class="alphabet">C</span></dt>
-                                        <dd>
-                                            <img src="images/avatar.png" alt="avatar" class="avatar">
-                                            <span class="full-name">Carlos jose</span>
-                                        </dd>
-                                        <dd>
-                                            <img src="images/avatar.png" alt="avatar" class="avatar">
-                                            <span class="full-name">Carlos jose</span>
-                                        </dd>
-                                        <dd>
-                                            <img src="images/avatar.png" alt="avatar" class="avatar">
-                                            <span class="full-name">Carlos jose</span>
-                                        </dd>
-                                    </dl>
-                                </div>
-                            </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                          Accordion Item #3
-                        </button>
-                      </h2>
-                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionPanelsStayOpenExample">
-                        <div class="accordion-body">
-                          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  </div>
-            </div>
-        </div>
-    </main>
-    <footer>
-        Footer
-    </footer>
+        </main>
+        <footer>
+            Footer
+        </footer>
+    </div>
+    
     <!-- Scripts bootstrap v5.2-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
-        <script src="traduccion.js"></script>
-        <script src="theme.js"></script>
+    <script src="js/traduccion.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>

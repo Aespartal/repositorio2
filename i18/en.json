@@ -6,7 +6,9 @@
         "inicio": "Home",
         "juego": "Game",
         "contacto": "Contact",
-        "dark": "Mode dark",
-        "light": "Mode light"
+        "theme" : {
+            "dark": "Mode dark",
+            "light": "Mode light"
+        }
     }
 }
